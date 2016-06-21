@@ -1,3 +1,6 @@
+![license](https://img.shields.io/github/license/pattern-lab/edition-php-mustache-webdesignday.svg?maxAge=2592000)
+[![Packagist](https://img.shields.io/packagist/v/pattern-lab/edition-mustache-webdesignday.svg?maxAge=2592000)](https://packagist.org/packages/pattern-lab/edition-mustache-webdesignday) [![Gitter](https://img.shields.io/gitter/room/pattern-lab/php.svg?maxAge=2592000)](https://gitter.im/pattern-lab/php)
+
 # Pattern Lab Web Design Day Edition for Mustache
 
 The Web Design Day Edition for Mustache gives attendees a clean and stable base from which to follow-along with the Pattern Lab workshop.

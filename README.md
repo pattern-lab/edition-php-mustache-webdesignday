@@ -7,9 +7,11 @@ The Web Design Day Edition for Mustache gives attendees a clean and stable base 
 The Web Design Day Edition for Mustache comes with the following components:
 
 * `pattern-lab/core`: [GitHub](https://github.com/pattern-lab/patternlab-php-core), [Packagist](https://packagist.org/packages/pattern-lab/core)
-* `pattern-lab/patternengine-mustache`: [documentation](https://github.com/pattern-lab/patternengine-php-twig#twig-patternengine-for-pattern-lab-php), [GitHub](https://github.com/pattern-lab/patternengine-php-twig), [Packagist](https://packagist.org/packages/pattern-lab/patternengine-twig)
+* `pattern-lab/patternengine-mustache`: [documentation](https://github.com/pattern-lab/patternengine-php-mustache#mustache-patternengine-for-pattern-lab-php), [GitHub](https://github.com/pattern-lab/patternengine-php-mustache), [Packagist](https://packagist.org/packages/pattern-lab/patternengine-mustache)
 * `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-assets-default)
 * `pattern-lab/styleguidekit-mustache-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-twig-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-twig-default)
+* `pattern-lab/plugin-faker`: [GitHub](https://github.com/pattern-lab/plugin-php-faker), [Packagist](https://packagist.org/packages/pattern-lab/plugin-faker)
+* `pattern-lab/plugin-reload`: [GitHub](https://github.com/pattern-lab/plugin-php-reload), [Packagist](https://packagist.org/packages/pattern-lab/plugin-reload)
 
 ## Installing
 
@@ -20,9 +22,9 @@ There are two methods for downloading and installing the Web Design Day Edition 
 
 ### Download a pre-built project
 
-The fastest way to get started with the Web Design Day Edition for Mustache is to [download the pre-built version](https://github.com/pattern-lab/edition-php-twig-standard/releases) from the [releases page](https://github.com/pattern-lab/edition-php-twig-standard/releases).
+The fastest way to get started with the Web Design Day Edition for Mustache is to [download the pre-built version](https://github.com/pattern-lab/edition-php-mustache-webdesignday/releases) from the [releases page](https://github.com/pattern-lab/edition-php-mustache-webdesignday/releases).
 
-**Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Web Design Day Edition for Mustache or to install plug-ins during "free-time" you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
+**Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Web Design Day Edition for Mustache after the event you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
 ### Use Composer to create a project
 
@@ -46,21 +48,32 @@ This will install the Web Design Day Edition for Mustache into a directory calle
 ### Exercise 1
 Type the following where your project was installed:
 
-    php core/console --starterkit --install pattern-lab/starterkit-mustache-webdesignday#exercise1start
+    php core/console --starterkit --suggestions
+    // when prompted choose 'exercise1start'
+    php core/console --generate
+    php core/console --server --quiet & php core/console --watch
 
 ### Exercise 2
 If you would like a clean start with exercise two type the following where your project was installed:
 
-    php core/console --starterkit --install pattern-lab/starterkit-mustache-webdesignday#exercise2start
+    php core/console --starterkit --suggestions
+    // when prompted choose 'exercise2start' and to replace source
+    php core/console --generate
+    php core/console --server --quiet & php core/console --watch
     
 ### Exercise 3 (Complete)
 If you would like a clean start with exercise three type the following where your project was installed:
 
-    php core/console --starterkit --install pattern-lab/starterkit-mustache-webdesignday#complete
+    php core/console --starterkit --suggestions
+    // when prompted choose 'complete' and to replace source
+    php core/console --generate
+    php core/console --server --quiet & php core/console --watch
 
 ## Updating Pattern Lab
 
-To update Pattern Lab please refer to each component's GitHub repository. The components are listed at the top of the README.
+To update Pattern Lab please make sure you've [installed Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). From the root of your project you can then run:
+
+    php composer update
 
 ## Helpful Commands
 
@@ -105,3 +118,7 @@ To install a near-empty StarterKit as a starting point for your project type:
 To install a specific StarterKit from GitHub type:
 
     php core/console --starterkit --install <starterkit-vendor/starterkit-name>
+    
+To view the suggested StarterKits for your edition and install one type:
+
+    php core/console --starterkit --suggestions

@@ -27,9 +27,15 @@
 		"php": ">=5.3.6",
 		"pattern-lab/core": "^2.0.0",
 		"pattern-lab/patternengine-mustache": "^2.0.0",
-		"pattern-lab/styleguidekit-mustache-default": "^2.0.0"
+		"pattern-lab/styleguidekit-mustache-default": "^3.0.0",
+		"pattern-lab/plugin-faker": "^1.0.0",
+		"pattern-lab/plugin-reload": "^1.0.0"
 	},
 	"scripts": {
+		"server": "php core/console --server",
+		"generate": "php core/console --generate",
+		"watch": "php core/console --watch",
+		"start": "php core/console --server --quiet & php core/console --watch",
 		"post-install-cmd": [
 			"PatternLab\\Installer::postInstallCmd"
 		],
@@ -50,5 +56,19 @@
 		"pre-package-uninstall": [
 			"PatternLab\\Installer::prePackageUninstall"
 		]
+	},
+	"extra": {
+		"patternlab": {
+			"starterKitSuggestions": [
+				"pattern-lab/starterkit-mustache-webdesignday#exercise1start",
+				"pattern-lab/starterkit-mustache-webdesignday#exercise2start",
+				"pattern-lab/starterkit-mustache-webdesignday#complete"
+			],
+			"config": {
+				"faker": {
+					"on": false
+				}
+			}
+		}
 	}
 }
